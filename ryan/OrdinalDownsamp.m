@@ -1,11 +1,23 @@
 function [imgout, args] = OrdinalDownsamp(imgin, varargin)
+% OrdinalDownsamp reads pixel values in each m-by-n block, shapes them 
+% into a 1D vector, sorts them, and then write them back to where they 
+% come from.
 %
-% OrdinalDownsamp
-% Author: Kinchung (Ryan) Wong
+% Usage:
+%     [imgout, args] = OrdinalDownsamp(imgin, m, n)
 %
-% Package namespace: "ryan.OrdinalDownsamp"
+% Optional parameters:
 %
-% License type: MIT License
+%     __ = OrdinalDownsamp(__, 'TileOrder', tileorder)
+% TileOrder can be 'column' (the default), or 'row'.
+%
+%     __ = OrdinalDownsamp(__, 'Postproc', postproc)
+% Postproc is a function handle that post-process the sorted values 
+% before returning them to the caller.
+%
+% This script is part of my personal collection of MATLAB scripts.
+% URL: https://github.com/kinchungwong/MyMatlabScriptCollection
+% Refer to LICENSE for copyright and license information
 %
 
     % Import functions from package

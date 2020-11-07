@@ -1,14 +1,17 @@
 function fig = OrdinalDownsampDisp(imgin, varargin)
+% OrdinalDownsampDisp displays the output of OrdinalDownsamp as a MATLAB
+% tiled-layout figure consisting of multiple slices of rank-statistic.
 %
-% OrdinalDownsampDisp
+% Usage:
+%     fig = OrdinalDownsampDisp(imgin, varargin)
 %
-% Author: Kinchung (Ryan) Wong
+% All arguments are passed intact into OrdinalDownsamp. This function
+% is responsible for extracting image slices of rank-statistic, and for
+% displaying all of them in a MATLAB figure.
 %
-% Package namespace: "ryan.OrdinalDownsampDisp"
-%
-% License type: MIT License
-%
-% See also: "ryan.OrdinalDownsamp"
+% This script is part of my personal collection of MATLAB scripts.
+% URL: https://github.com/kinchungwong/MyMatlabScriptCollection
+% Refer to LICENSE for copyright and license information
 %
 
 [imgout, args] = ryan.OrdinalDownsamp(imgin, varargin{:});
