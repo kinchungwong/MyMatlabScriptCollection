@@ -1,2 +1,5 @@
+% Top-level scripts accessible via "ryan" prefix.
 ryan
+
+% Ordinal Downsamp implementation functions 
 ordinal_downsamp
