@@ -58,6 +58,9 @@ if isfolder(mmsc.local_git_path)
                     fprintf('%s\n', mmsc_package_item.mklink_cmd);
                     system(mmsc_package_item.mklink_cmd);
                 end
+                if ~isfolder(mmsc_package_item.path_in_shadow)
+                    fprintf('Unable to create shadow folder: %s\n');
+                end
             end
             clear mmsc_package_item
         end
